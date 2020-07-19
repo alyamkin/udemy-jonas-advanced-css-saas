@@ -1,3 +1,18 @@
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  Desktop
+>1800px:        Big desctop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layouts + grid > page layout > components
+*/
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 *,
 *::after,
@@ -8,6 +23,15 @@
 
 html {
   font-size: 62.5%; }
+  @media (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box; }
@@ -109,6 +133,21 @@ body {
   .paragraph:not(:last-child) {
     margin-bottom: 3rem; }
 
+/*
+0 - 600px:      Phone
+600 - 900px:    Tablet portrait
+900 - 1200px:   Tablet landscape
+1200 - 1800px:  Desktop
+>1800px:        Big desctop
+
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+
+ORDER: Base + typography > general layouts + grid > page layout > components
+*/
 .section-about {
   background-color: #f7f7f7;
   padding: 25rem 0;
